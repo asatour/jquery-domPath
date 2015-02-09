@@ -1,0 +1,10 @@
+{
+  "camelcase" :   true,
+  "quotmark"  :   "single",
+  "browser"   :   true,
+  "globals"   : {
+        "$"       : false,
+        "jQuery"  : false
+  },
+  "extends": "../.jshintrc"
+}

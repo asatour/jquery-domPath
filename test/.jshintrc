@@ -1,0 +1,8 @@
+{
+  "quotmark"  : "single",
+  "qunit"     : true,
+  "jquery"    : true ,
+  "-W053"     : true,
+  "maxlen"    : 125,
+  "extends"   : "../.jshintrc"
+}

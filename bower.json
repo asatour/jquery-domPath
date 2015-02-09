@@ -1,0 +1,26 @@
+{
+  "name": "jquery.domPath",
+  "version": "1.0.0",
+  "main": [
+    "src/jquery.domPath.js"
+  ],
+  "homepage": "https://github.com/asatour/jquery-domPath",
+  "authors": [
+    "Abdelahad SATOUR <https://github.com/asatour>"
+  ],
+  "description": "A simple jQuery plugin for getting DOM Path of HTML elements",
+  "keywords": ["DOM", "path", "fullPath", "inspect"],
+
+  "dependencies": {
+    "jquery": ">=1.2"
+  },
+  "license": "MIT",
+  "ignore": [
+    "test",
+    ".*",
+    "*.json",
+    "*.md",
+    "*.txt",
+    "Gruntfile.js"
+  ]
+}
