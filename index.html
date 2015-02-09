@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="jquery.domPath : jquery, domPath, dom, fullPath, path, inspect">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>jquery.domPath</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/asatour/jquery-domPath">View on GitHub</a>
+
+          <h1 id="project_title">jquery.domPath</h1>
+          <h2 id="project_tagline">jquery, domPath, dom, fullPath, path, inspect</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/asatour/jquery-domPath/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/asatour/jquery-domPath/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="jquerydompath" class="anchor" href="#jquerydompath" aria-hidden="true"><span class="octicon octicon-link"></span></a>jquery.domPath</h1>
+
+<p>A simple jQuery plugin for getting DOM Path of HTML elements (<a href="http://asatour.github.io/jquery-domPath/">http://asatour.github.io/jquery-domPath/</a>).</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Include script <em>after</em> the jQuery library : </p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/path/jquery.domPath.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="basic-configuration" class="anchor" href="#basic-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic configuration</h3>
+
+<p>HTML:</p>
+
+<p><em>Note: The HTML code below, will be used in all usage examples in this documentation.</em></p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">body</span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>module<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>products-block<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>description<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">h1</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>section-title<span class="pl-pds">"</span></span>&gt;
+            product general description
+        &lt;/<span class="pl-ent">h1</span>&gt;
+        &lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>products<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">li</span>&gt;Cameras&lt;/<span class="pl-ent">li</span>&gt;
+            &lt;<span class="pl-ent">li</span>&gt;TV&lt;/<span class="pl-ent">li</span>&gt;
+            &lt;<span class="pl-ent">li</span>&gt;Computers&lt;/<span class="pl-ent">li</span>&gt;
+        &lt;/<span class="pl-ent">ul</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;</pre></div>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath();</pre></div>
+
+<p>Output:</p>
+
+<p>The value of products_domPath is:</p>
+
+<div class="highlight highlight-js"><pre>[<span class="pl-s1"><span class="pl-pds">"</span>div#products-block.module &gt; div.description &gt; ul.products<span class="pl-pds">"</span></span>]</pre></div>
+
+<h3>
+<a id="with-additional-settings" class="anchor" href="#with-additional-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>With additional settings</h3>
+
+<p>JavaScript:</p>
+
+<p>Don't get elements class.</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath({class<span class="pl-k">:</span> <span class="pl-c1">false</span>});</pre></div>
+
+<p>Output:</p>
+
+<p>The value of products_domPath is:</p>
+
+<div class="highlight highlight-js"><pre>[<span class="pl-s1"><span class="pl-pds">"</span>div#products-block &gt; div &gt; ul<span class="pl-pds">"</span></span>]</pre></div>
+
+<h2>
+<a id="jquerydompath-options" class="anchor" href="#jquerydompath-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>jquery.domPath Options</h2>
+
+<h3>
+<a id="options-with-default-values" class="anchor" href="#options-with-default-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options with default values</h3>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> options <span class="pl-k">=</span> {
+  tag             <span class="pl-k">:</span>   <span class="pl-c1">true</span>,   <span class="pl-c">// get dom tag</span>
+  lowerCase       <span class="pl-k">:</span>   <span class="pl-c1">true</span>,   <span class="pl-c">// get tag in lower or upper case</span>
+  class           <span class="pl-k">:</span>   <span class="pl-c1">true</span>,   <span class="pl-c">// get element class</span>
+  id              <span class="pl-k">:</span>   <span class="pl-c1">true</span>,   <span class="pl-c">// get element id</span>
+  body            <span class="pl-k">:</span>   <span class="pl-c1">false</span>,  <span class="pl-c">// show body in dom full path</span>
+  idBeforeClass   <span class="pl-k">:</span>   <span class="pl-c1">true</span>,   <span class="pl-c">// display id before class</span>
+  oneResult       <span class="pl-k">:</span>   <span class="pl-c1">false</span>,  <span class="pl-c">// get only the first result(as string)</span>
+  scaleType       <span class="pl-k">:</span>   <span class="pl-c1">false</span>   <span class="pl-c">// if the result contains only one element get it as string and not array</span>
+};
+<span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath(options);</pre></div>
+
+<h3>
+<a id="example-of-options" class="anchor" href="#example-of-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example of options</h3>
+
+<p>Below all examples of the possible configuration.</p>
+
+<h4>
+<a id="tag" class="anchor" href="#tag" aria-hidden="true"><span class="octicon octicon-link"></span></a>tag</h4>
+
+<p>If true display the tag name in the DOM Path</p>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath({tag<span class="pl-k">:</span> <span class="pl-c1">false</span>});</pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-js"><pre>[<span class="pl-s1"><span class="pl-pds">"</span>#products-block.module &gt; .description &gt; .products<span class="pl-pds">"</span></span>]</pre></div>
+
+<h4>
+<a id="lowercase" class="anchor" href="#lowercase" aria-hidden="true"><span class="octicon octicon-link"></span></a>lowerCase</h4>
+
+<p>Display the tag name in lowercase</p>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath({lowerCase<span class="pl-k">:</span> <span class="pl-c1">false</span>});</pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-js"><pre>[<span class="pl-s1"><span class="pl-pds">"</span>DIV#products-block.module &gt; DIV.description &gt; UL.products<span class="pl-pds">"</span></span>]</pre></div>
+
+<h4>
+<a id="class" class="anchor" href="#class" aria-hidden="true"><span class="octicon octicon-link"></span></a>class</h4>
+
+<p>Display the class attribute (if it exists) in the DOM Path</p>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath({lowerCase<span class="pl-k">:</span> <span class="pl-c1">false</span>});</pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-js"><pre>[<span class="pl-s1"><span class="pl-pds">"</span>div#products-block &gt; div &gt; ul<span class="pl-pds">"</span></span>]</pre></div>
+
+<h4>
+<a id="id" class="anchor" href="#id" aria-hidden="true"><span class="octicon octicon-link"></span></a>id</h4>
+
+<p>Display the ID attribute (if it exists) in the DOM Path</p>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath({id<span class="pl-k">:</span> <span class="pl-c1">false</span>});</pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-js"><pre>[<span class="pl-s1"><span class="pl-pds">"</span>div.module &gt; div.description &gt; ul.products<span class="pl-pds">"</span></span>]</pre></div>
+
+<h4>
+<a id="body" class="anchor" href="#body" aria-hidden="true"><span class="octicon octicon-link"></span></a>body</h4>
+
+<p>Show the body tag in the DOM Path (default is to not show it)</p>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath({body<span class="pl-k">:</span> <span class="pl-c1">true</span>});</pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-js"><pre>[<span class="pl-s1"><span class="pl-pds">"</span>body &gt; div#products-block.module &gt; div.description &gt; ul.products<span class="pl-pds">"</span></span>]</pre></div>
+
+<h4>
+<a id="idbeforeclass" class="anchor" href="#idbeforeclass" aria-hidden="true"><span class="octicon octicon-link"></span></a>idBeforeClass</h4>
+
+<p>Display id before class (default)
+<em>Note: If id or class doesn't exist, this setting will have no effect</em></p>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath({idBeforeClass<span class="pl-k">:</span> <span class="pl-c1">false</span>});</pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-js"><pre>[<span class="pl-s1"><span class="pl-pds">"</span>div.module#products-block &gt; div.description &gt; ul.products<span class="pl-pds">"</span></span>]</pre></div>
+
+<h4>
+<a id="oneresult" class="anchor" href="#oneresult" aria-hidden="true"><span class="octicon octicon-link"></span></a>oneResult</h4>
+
+<p>Get only the first Result as String inspite of Array</p>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>li<span class="pl-pds">"</span></span>).domPath({oneResult<span class="pl-k">:</span> <span class="pl-c1">true</span>});</pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s1"><span class="pl-pds">"</span>div#products-block.module &gt; div.description &gt; ul.products &gt; li<span class="pl-pds">"</span></span></pre></div>
+
+<h4>
+<a id="scaletype" class="anchor" href="#scaletype" aria-hidden="true"><span class="octicon octicon-link"></span></a>scaleType</h4>
+
+<p>In case of one result, inspite of returning an Array with one element, get the result as String</p>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> products_domPath <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>.products<span class="pl-pds">"</span></span>).domPath({scaleType<span class="pl-k">:</span> <span class="pl-c1">true</span>});</pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s1"><span class="pl-pds">"</span>div#products-block.module &gt; div.description &gt; ul.products<span class="pl-pds">"</span></span></pre></div>
+
+<h2>
+<a id="authors" class="anchor" href="#authors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors</h2>
+
+<p><a href="https://github.com/asatour">Abdelahad SATOUR</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">jquery.domPath maintained by <a href="https://github.com/asatour">asatour</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
