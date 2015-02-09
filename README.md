@@ -1,6 +1,6 @@
 # jquery.domPath 
 
-A simple jQuery plugin for getting DOM Path of HTML elements (http://asatour.github.io/domPath/).
+A simple jQuery plugin for getting DOM Path of HTML elements (http://asatour.github.io/jquery-domPath/).
 
 ## Installation
 
