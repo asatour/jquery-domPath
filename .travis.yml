@@ -5,3 +5,6 @@ before_script:
   - npm install -g bower
   - npm install -g grunt-cli
 script: grunt test --verbose
+env:
+  global:
+    - secure: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC4GIgqXdPOkehPwITfExrH+NrT\nq3uJlNS0ZWeEd/QCVLayVGTScAzYrJZcC3hw09rHe9fQv0VRtvfGN1O4Zh4Q1cTI\n1DBswD5F68SFxWN/DbPafCmu+wuCEr767iCqw8JwxynChyRYMOcdf22VQz8QUbfb\nCKwHayMOtCC8XiPLBQIDAQAB
