@@ -22,7 +22,8 @@ module.exports = function (grunt) {
             },
             build: {
                 files: {
-                    'build/jquery.domPath-<%= pkg.version %>.min.js': 'src/jquery.domPath.js'
+                    'build/jquery.domPath-<%= pkg.version %>.min.js': 'src/jquery.domPath.js',
+                    'src/jquery.domPath.min.js': 'src/jquery.domPath.js'
                 }
             }
         },
@@ -44,4 +45,5 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', ['jshint', 'qunit']);
     grunt.registerTask('default', ['jshint', 'qunit', 'uglify']);
+    grunt.registerTask('cdn', ['uglify']);
 };
