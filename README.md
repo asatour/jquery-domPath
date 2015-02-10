@@ -194,3 +194,7 @@ Output:
 ## Authors
 
 [Abdelahad SATOUR](https://github.com/asatour)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/asatour/jquery-dompath/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
