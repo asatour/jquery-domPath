@@ -1,8 +1,7 @@
-# jquery.domPath 
+# jquery.domPath [![Build Status](https://travis-ci.org/asatour/jquery-domPath.svg)](https://travis-ci.org/asatour/jquery-domPath) [![Code Climate](https://codeclimate.com/github/asatour/jquery-domPath/badges/gpa.svg)](https://codeclimate.com/github/asatour/jquery-domPath) [![Coverage Status](https://coveralls.io/repos/asatour/jquery-domPath/badge.svg)](https://coveralls.io/r/asatour/jquery-domPath)
 
 A simple jQuery plugin for getting DOM Path of HTML elements (http://asatour.github.io/jquery-domPath/).
 
-[![Build Status](https://travis-ci.org/asatour/jquery-domPath.svg)](https://travis-ci.org/asatour/jquery-domPath)
 
 ## Installation
 
